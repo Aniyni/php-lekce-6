@@ -64,15 +64,19 @@ FROM class c
 UPDATE class c
     JOIN teacher t ON t.id = c.homeroom_teacher_id
 SET c.name = 'C'
-WHERE t.name IN ('Albert', 'Brandon');
+WHERE t.name IN ('Albert', 'Susan');
 
 SELECT c.year, c.name, t.name
 FROM class c
          JOIN teacher t ON t.id = c.homeroom_teacher_id;
 
 UPDATE class c
-SET c.name = 'A'
+SET c.name = 'B'
 WHERE c.name = 'C';
+
+SELECT c.year, c.name, t.name
+FROM class c
+         JOIN teacher t ON t.id = c.homeroom_teacher_id;
 
 
 #####################
