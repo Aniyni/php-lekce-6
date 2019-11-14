@@ -46,7 +46,7 @@ ORDER BY c.year, c.name;
 
 SELECT c.year AS class_year, c.name AS class_name, t.name AS teacher
 FROM class c
-         JOIN teacher t ON t.id = c.homeroom_teacher_id
+JOIN teacher t ON t.id = c.homeroom_teacher_id
 WHERE t.name = 'Albert';
 
 SELECT class.year, class.name, COUNT(*)
@@ -59,16 +59,16 @@ GROUP BY class.year, class.name;
 # Ukol 6:
 SELECT c.year, c.name, t.name
 FROM class c
-         JOIN teacher t ON t.id = c.homeroom_teacher_id;
+JOIN teacher t ON t.id = c.homeroom_teacher_id;
 
 UPDATE class c
-    JOIN teacher t ON t.id = c.homeroom_teacher_id
+JOIN teacher t ON t.id = c.homeroom_teacher_id
 SET c.name = 'C'
 WHERE t.name IN ('Albert', 'Susan');
 
 SELECT c.year, c.name, t.name
 FROM class c
-         JOIN teacher t ON t.id = c.homeroom_teacher_id;
+JOIN teacher t ON t.id = c.homeroom_teacher_id;
 
 UPDATE class c
 SET c.name = 'B'
@@ -76,7 +76,7 @@ WHERE c.name = 'C';
 
 SELECT c.year, c.name, t.name
 FROM class c
-         JOIN teacher t ON t.id = c.homeroom_teacher_id;
+JOIN teacher t ON t.id = c.homeroom_teacher_id;
 
 
 #####################
